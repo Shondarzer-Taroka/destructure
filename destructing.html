@@ -27,11 +27,20 @@
             feilds:'name'
         }
         let { page = 2, limit = 12, ...filter} = obj4
+        filter['greatings']='welcome'
+        filter.add=function(a,b){
+            return a+ b
+        }
         console.log(filter,'filters');
+       console.log(obj4===filter);
+        console.log(obj4);
+       let d= filter.add(9,9)
+       console.log(d);
+       
         
-
-        let obj5 = { ...obj4 }
-        console.log(obj5);
+       
+        // let obj5 = { ...obj4 }
+        // console.log(obj5);
 
         // let { page, limit } = obj4
 
