@@ -21,14 +21,18 @@
         console.log(first, fourth, last)
 
         let obj4 = {
-            page:1,
-            limit:10
- 
+            page: 1,
+            limit: 10,
+            sort:'createdAt',
+            feilds:'name'
         }
- let { page=2, limi=12 } = obj4
- let obj5= {...obj4}
- console.log(obj5);
- 
+        let { page = 2, limit = 12, ...filter} = obj4
+        console.log(filter,'filters');
+        
+
+        let obj5 = { ...obj4 }
+        console.log(obj5);
+
         // let { page, limit } = obj4
 
 
